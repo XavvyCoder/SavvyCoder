@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Code Snippet View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CodeSnippet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CodeSnippetViewController" customModule="SavvyCoder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mth-2Q-wrB">
+                                <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CodeSnippetCell" rowHeight="40" id="ctI-cQ-MY0" customClass="CodeSnippetTableViewCell" customModule="SavvyCoder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ctI-cQ-MY0" id="I5u-l6-Tio">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avg-N7-4pR">
+                                                    <rect key="frame" x="320.33333333333331" y="4" width="49.666666666666686" height="32"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" imagePadding="0.0" cornerStyle="fixed">
+                                                        <imageReference key="image" image="checkmark.circle.fill" catalog="system" symbolScale="large"/>
+                                                        <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="iconTapped:" destination="ctI-cQ-MY0" eventType="touchUpInside" id="eaG-ER-15D"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="avg-N7-4pR" firstAttribute="top" secondItem="I5u-l6-Tio" secondAttribute="top" constant="4" id="BTc-yd-ENo"/>
+                                                <constraint firstAttribute="bottom" secondItem="avg-N7-4pR" secondAttribute="bottom" constant="4" id="Hb6-kB-z5n"/>
+                                                <constraint firstAttribute="trailing" secondItem="avg-N7-4pR" secondAttribute="trailing" constant="20" id="Q3B-SY-sP7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="iconButton" destination="avg-N7-4pR" id="W8R-Pq-cVd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mth-2Q-wrB" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="G7N-GQ-yel"/>
+                            <constraint firstItem="Mth-2Q-wrB" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Lke-oV-ptg"/>
+                            <constraint firstItem="Mth-2Q-wrB" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="wKw-mU-Kgh"/>
+                            <constraint firstItem="Mth-2Q-wrB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="z2A-MW-9to"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Mth-2Q-wrB" id="aTm-Va-i4k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="-256.6350710900474"/>
+        </scene>
+        <!--Code Snippet Detail View Controller-->
+        <scene sceneID="EzS-76-dM9">
+            <objects>
+                <viewController storyboardIdentifier="CodeSnippetDetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pl2-6p-1z1" customClass="CodeSnippetDetailViewController" customModule="SavvyCoder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P0H-g4-Tk6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RJ3-YO-rGU">
+                                <rect key="frame" x="16" y="297" width="358" height="250"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="K8W-8M-arK"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vXf-vK-mop"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RJ3-YO-rGU" firstAttribute="trailing" secondItem="P0H-g4-Tk6" secondAttribute="trailingMargin" id="36y-pQ-m6c"/>
+                            <constraint firstItem="RJ3-YO-rGU" firstAttribute="centerX" secondItem="P0H-g4-Tk6" secondAttribute="centerX" id="3N9-1g-rPg"/>
+                            <constraint firstItem="RJ3-YO-rGU" firstAttribute="centerY" secondItem="P0H-g4-Tk6" secondAttribute="centerY" id="9eB-l2-s3T"/>
+                            <constraint firstItem="RJ3-YO-rGU" firstAttribute="leading" secondItem="P0H-g4-Tk6" secondAttribute="leadingMargin" id="eoa-AL-WaM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="RJ3-YO-rGU" id="2rd-O0-BQz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zhb-8q-Ybn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970.76923076923072" y="-257.34597156398104"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
